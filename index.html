@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello, I'm Austin Torres a Front-End Developer with a passion for learning and perfecting my skills.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+</noscript>
+
+    
+    <link rel="icon" type="image/png" href="images/nav-logo.png">
+    <title>Austin Torres | Front-End Developer</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "DehX4m7-kJlcGoLNK",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Select all forms with the class 'contact-form'
+            let allForms = document.querySelectorAll('.contact-form');
+    
+            // Loop through each form and attach the submit event listener
+            allForms.forEach(form => {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent default form submission
+    
+                    // Send the form data using emailjs
+                    emailjs.sendForm('service_n63khcw', 'contact_form', this)
+                        .then(() => {
+                            console.log('SUCCESS!');
+                            window.location.reload(); // Reload the page after success
+                        }, (error) => {
+                            console.log('FAILED...', error);
+                        });
+                });
+            });
+        };
+    </script>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <a href="/" aria-label="Nav Home Link"><img src="images/nav-logo.webp" alt="nav logo"></a>
+            </div>
+            <div>
+                <ul>
+                    <li class="desk-link"><a href="#" aria-label="About Button" onclick="revealHeroContact()">About</a></li>
+                    <li class="mobile-link"><a href="#about" aria-label="About Button">About</a></li>
+                    <li><a href="#projects" aria-label="Projects Button">Projects</a></li>
+                    <li><a href="#tech" aria-label="Tech Button">Tech</a></li>
+                    <li class="desk-link"><a href="#" onclick="revealHeroContact()" aria-label="Contact Button">Contact</a></li>
+                    <li class="mobile-link"><a href="#contact-form" aria-label="Contact Button">Contact</a></li>
+                    <li class="nav-resume"><a href="./Austin Torres Frontend Developer.pdf">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-name">
+                <h1>Austin Torres</h1>
+                <p>Front-End Developer</p>
+                <a href="#" aria-label="About Me Button"><button id="hero-button" class="arrow-button">About Me</button></a>
+            </div>
+        </div>
+        <div class="socials">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/austin-torres-55696420a" aria-label="linkedin button"><img src="images/socials/slightly_more_pixelated_linkedin_logo.webp" alt="linkedin logo"></a></li>
+                <li><a href="https://github.com/austintorres578/" aria-label="github button"><img src="images/socials/less_pixelated_github_logo_v2.webp" alt="github logo"></a></li>
+            </ul>
+        </div>
+        <div class="hero-letter">
+            <div class="a-letter-con">
+                <div class="a-three-row one-long">
+                  <div id="remove-shadow" style="border: none;box-shadow: none;">
+            
+                  </div>
+                  <div style="background-color: #f3c202;">
+            
+                  </div>
+                  <div id="remove-shadow" style="border: none;box-shadow: none;">
+            
+                  </div>
+                </div>
+                <div class="a-three-row">
+                  <div style="background-color: #f3c202;">
+            
+                  </div>
+                  <div id="remove-shadow" style="border: none; box-shadow: none;">
+            
+                  </div>
+                  <div style="background-color: #f3c202;">
+            
+                  </div>
+                </div>
+                <div class="a-one-row">
+                  <div class="add-shadow" style="background-color:#1ba1a4">
+            
+                  </div>
+                </div>
+                <div class="a-three-row">
+                  <div style="background-color:#1ba1a4">
+            
+                  </div>
+                  <div id="remove-shadow" style="border: none;box-shadow: none;">
+            
+                  </div>
+                  <div style="background-color:#1ba1a4">
+            
+                  </div>
+                </div>
+                <div class="a-three-row">
+                  <div style="background-color: #4078b3;">
+            
+                  </div>
+                  <div id="remove-shadow" style="border: none;box-shadow: none;">
+            
+                  </div>
+                  <div style="background-color: #4078b3;">
+            
+                  </div>
+                </div>
+                <div class="a-three-row">
+                  <div style="background-color: #4078b3;">
+            
+                  </div>
+                  <div id="remove-shadow" style="border: none;box-shadow: none;">
+            
+                  </div>
+                  <div style="background-color: #4078b3;">
+            
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="hero-stripes">
+            <div class="red">
+
+            </div>
+            <div class="yellow">
+
+            </div>
+            <div class="cyan">
+
+            </div>
+            <div class="blue">
+
+            </div>
+
+        </div> -->
+
+        <div class="hero-contact">
+            <div class="hero-contact-wrapper">
+                <div class="hero-contact-about">
+                    <div class="about-text">
+                        <h3>About Me.</h3>
+                        <p>
+                            I am a <strong>passionate Front-end Web Developer</strong> with a knack for creating <strong>visually stunning</strong> and <strong>user-friendly websites</strong>. With a <strong>strong eye for design</strong> and <strong>user experience</strong>, I craft <strong>intuitive digital solutions</strong> that engage and captivate. Always eager to <strong>learn and grow</strong>, I embrace challenges with <strong>creativity</strong> and a <strong>commitment to excellence</strong>. Whether collaborating with a team or working solo, I bring <strong>positivity, precision</strong>, and a drive to <strong>deliver outstanding results</strong>.
+                        </p>
+                    </div>
+                    <div class="hero-contact-tech">
+                        <div>
+                            <img src="images\tech\html_pixelated.webp" alt="html logo">
+                            <p>HTML5</p>
+                        </div>
+                        <div>
+                            <img src="images\tech\css_pixelated.webp" alt="css logo">
+                            <p>CSS3</p>
+                        </div>
+                        <div>
+                            <img src="images\tech\javascript_pixelated.webp" alt="javascript logo">
+                            <p>Javascipt</p>
+                        </div>
+                        <div>
+                            <img src="images\tech\react_less_pixelated.webp" alt="react logo">
+                            <p>React</p>
+                        </div>
+                        <div>
+                            <img src="images\tech\wordpress_pixelated.webp" alt="wordpress logo">
+                            <p>Wordpress</p>
+                        </div>
+                        <div>
+                            <img src="images\tech\figma_more_pixelated.webp" alt="figma logo">
+                            <p>Figma</p>
+                        </div>
+                        <div>
+                            <img src="images\tech\sass_pixelated.webp" alt="sass logo">
+                            <p>Sass</p>
+                        </div>
+                        <div>
+                            <img src="images\tech\bootstrap_pixelated.webp" alt="bootstrap logo">
+                            <p>Bootstrap</p>
+                        </div>
+                    </div>
+                    <a href="./Austin Torres Frontend Developer.pdf" target="_blank" aria-label="resume button" style="text-decoration: none;width: fit-content;display: block;margin-left: auto;margin-right: auto;"><button id="form-button" style="border: none;display: block;cursor: pointer;">Resume</button></a>
+                    <div class="floating-about">
+                        <h2>About</h2>
+                    </div>
+                </div>
+                <div class="hero-contact-form">
+                    <div class="form-top">
+                        <div>
+                            <h3>Let's talk.</h3>
+                        <p>New projects, freelance inquiry or even a coffee.</p>
+                        </div>
+                        <div style="width: fit-content;">
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        
+                        <label for="contact-name-input">Name *</label>
+                        <input type="text" name="user_name" id="contact-name-input"></input>
+                        
+                        <label for="contact-email-input">Email *</label>
+                        <input type="email" name="user_email" id="contact-email-input"></input>
+                        
+                        <label for="contact-message">Message *</label>
+                        <textarea name="message" id="contact-message"></textarea>
+                        <input type="submit" id="form-button" value="Send Message"></input>
+                    </form>
+                    <div class="floating-contact">
+                        <h2>Contact</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="mobile-about">
+        <div id="about" class="mobile-about-me">
+            <h3>About Me.</h3>
+            <p>Front-End Developer</p>
+            <p>
+                I am a <strong>passionate Front-end Web Developer</strong> with a knack for creating <strong>visually stunning</strong> and <strong>user-friendly websites</strong>. With a <strong>strong eye for design</strong> and <strong>user experience</strong>, I craft <strong>intuitive digital solutions</strong> that engage and captivate. Always eager to <strong>learn and grow</strong>, I embrace challenges with <strong>creativity</strong> and a <strong>commitment to excellence</strong>. Whether collaborating with a team or working solo, I bring <strong>positivity, precision</strong>, and a drive to <strong>deliver outstanding results</strong>.
+              </p>
+              <a href="Resume.pdf" target="_blank" aria-label="resume button" style="text-decoration: none;width: fit-content;padding-left: 20px;display: block;"><button id="form-button" style="border: none;display: block;cursor: pointer;">Resume</button></a>
+        </div>
+        <div class="floating-about">
+            <h3>About</h3>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-section">
+
+        <div class="tech-container keys">
+            <div class="key-con" style="background-color: #df0024;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/html_pixelated.webp" alt="html logo">
+                    </div>
+                </div> 
+                <p>HTML5</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #f3c300;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/css_pixelated.webp" alt="css logo">
+                    </div>
+                </div> 
+                <p>CSS3</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #00ac9f;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/javascript_pixelated.webp" alt="javascript logo">
+                    </div>
+                </div> 
+                <p>JAVASCRIPT</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #2e6db4;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/react_less_pixelated.webp" alt="react logo">
+                    </div>
+                </div> 
+                <p>REACT</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #2e6db4;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/wordpress_pixelated.webp" alt="wordpress logo">
+                    </div>
+                </div> 
+                <p>WORDPRESS</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #00ac9f;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/figma_more_pixelated.webp" alt="figma logo">
+                    </div>
+                </div> 
+                <p>FIGMA</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #f3c300;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/sass_pixelated.webp" alt="sass logo">
+                    </div>
+                </div> 
+                <p>SASS</p>  
+            </div>
+
+            <div class="key-con" style="background-color: #df0024;">
+                <div class="tech key__button">
+                    <div class="tech-img">
+                        <img src="images/tech/bootstrap_pixelated.webp" alt="bootstrap logo">
+                    </div>
+                </div> 
+                <p>BOOTSTRAP</p>  
+            </div>
+        </div>
+    
+    </section>
+
+    <section class="project-section" id="projects">
+        <div class="projects-header">
+            <p>My Projects</p>
+            <h1>Latest Works</h1>
+        </div>
+
+        <img class="floating-shape" style="position: absolute;left:5%;top: 15%;" src="images/shapes/blue-square.webp" alt="blue square">
+        <img class="floating-shape" style="position: absolute;right:0%;top: 30%;" src="images/shapes/blue-square.webp" alt="blue square">
+
+        <img class="floating-shape" style="position: absolute;left:0%;bottom: 25%;" src="images/shapes/blue-x.webp" alt="blue x">
+
+        <img class="floating-shape" style="position:absolute;top:55%;left:5%;" src="images/shapes/green-square.webp" alt="green square">
+
+        <img class="floating-shape" style="position: absolute;right:7%;top: 40%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/green-triangle.webp" alt="green triangle">
+
+        <img class="floating-shape" style="position: absolute;left:7%;top: 35%; height: 65px;width: auto;object-fit: contain;" src="images/shapes/red-circle.webp" alt="red circle">
+        <img class="floating-shape" style="position: absolute;right: 5%;top: 17%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/red-circle.webp" alt="red circle">
+
+        <img class="floating-shape" style="position: absolute;right: 7%;bottom: 37%;height: 50px;width: auto;object-fit: contain;" src="images/shapes/red-x.webp" alt="red x">
+
+        <img class="floating-shape" style="position: absolute;left:14%;bottom: 5%;height: 75px;width: auto;object-fit: contain;" src="images/shapes/turq-circle.webp" alt="turquoise circle">
+
+        <img class="floating-shape" style="position: absolute;bottom: 15%;right: 2%; height: 65px;width: auto;object-fit: contain;" src="images/shapes/turq-triangle.webp" alt="turquoise triangle">
+
+        <img class="floating-shape" style="position: absolute;left:13%;top: 23%;" src="images/shapes/turq-x.webp" alt="turquoise x">
+
+        <!-- <div class="project project-right" style="background: url(images/xfinity-project.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;"> -->
+        <div class="project project-right" style="background: url(images/weather-project.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;">
+            <div class="container">
+                <div class="project-name">
+                    <h1>Weather Channel</h1>
+                    <p>This project was is an improvement on the basic weather app. The page is a clone of the weather channel but also works like the original because of API connectivity.</p>
+                    <a href="https://bejewelled-unicorn-5837be.netlify.app/" target="_blank" aria-label="Weather Channel Project Button"><button class="arrow-button">View Project</button></a>
+                </div>
+                <div class="blue-overlay">
+
+                </div>
+                <div class="project-scroll-overlay">
+
+                </div>
+            </div>
+            <div class="project-count">
+                <h1>01</h1>
+            </div>
+            <div class="ps-side">
+                <div class="ps-side-logo">
+                    <img src="images/mini-logo.webp" alt="mini site logo">
+                    <p>Austin</p>
+                </div>
+                <p class="ps-side-sub">Web | Dev</p>
+                <div class="ps-side-text">
+                    <h3>
+                        Front-end
+                    </h3>
+                </div>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>AWESOME</p>
+                    </div>
+                    <div class="rating-letter">
+                        <h2>A</h2>
+                    </div>
+                    <div class="rating-below">
+                        <p>ABCD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project project-left" style="background: url(images/gamedatabase.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;">
+        <!-- <div class="project project-left" style="    background: url(images/weather-project.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;"> -->
+            <div class="container">
+                <div class="project-name">
+                    <h1>Game Database</h1>
+                    <p>This project is a gaming database that allows users to search for games by name, console, and genre. The games are sorted by metacritic score and are selectable to view details like game description and more.</p>
+                    <a href="https://poetic-rabanadas-1d8116.netlify.app/" target="_blank" aria-label="game database button"><button class="arrow-button">View Project</button></a>
+                </div>
+                <div class="blue-overlay">
+
+                </div>
+                <div class="project-scroll-overlay">
+
+                </div>
+            </div>
+            <div class="project-count">
+                <h1>02</h1>
+            </div>
+            <div class="ps-side">
+                <div class="ps-side-logo">
+                    <img src="images/mini-logo.webp" alt="mini site logo">
+                    <p>Austin</p>
+                </div>
+                <p class="ps-side-sub">Web | Dev</p>
+                <div class="ps-side-text">
+                    <h3>
+                        Front-end
+                    </h3>
+                </div>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>BOLD</p>
+                    </div>
+                    <div class="rating-letter">
+                        <h2>B</h2>
+                    </div>
+                    <div class="rating-below">
+                        <p>ABCD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project project-right" style="background: url(images/ecomm-project.webp);background-size: cover;background-position: right;">
+            <div class="container">
+                <div class="project-name">
+                    <h1>Soylent Ecommerce</h1>
+                    <p>This project is a clone of the Soylent.com's home and product page integrated with stripe through an express server for full checkout functionality</p>
+                    <a href="https://symphonious-frangipane-463737.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Ecomm Soylent Clone">
+                        <button class="arrow-button">View Project</button>
+                    </a>
+                </div>
+                <div class="blue-overlay">
+                </div>
+                <div class="project-scroll-overlay">
+
+                </div>
+            </div>
+            <div class="project-count">
+                <h1>03</h1>
+            </div>
+            <div class="ps-side">
+                <div class="ps-side-logo">
+                    <img src="images/mini-logo.webp" alt="mini site logo">
+                    <p>Austin</p>
+                </div>
+                <p class="ps-side-sub">Web | Dev</p>
+                <div class="ps-side-text">
+                    <h3>
+                        Front-end
+                    </h3>
+                </div>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>COOL</p>
+                    </div>
+                    <div class="rating-letter">
+                        <h2>C</h2>
+                    </div>
+                    <div class="rating-below">
+                        <p>ABCD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project project-left" style="background:url('images/rockhorse-project.webp');background-size: cover;background-position: right;">
+            <div class="container">
+                <div class="project-name">
+                    <h1>Lighthouse Score</h1>
+                    <p>This project was originally going to be used as updated version of a family friends coverband website. Now it has become a project with the goal to obtain a perfect score on Google Lighthouse</p>
+                    <a href="https://austintorres578.github.io/ROCKHORSE-SITE/" target="_blank" aria-label="rockhouse project button"><button class="arrow-button">View Project</button></a>
+                </div>
+                <div class="blue-overlay">
+
+                </div>
+                <div class="project-scroll-overlay">
+
+                </div>
+            </div>
+            <div class="project-count">
+                <h1>04</h1>
+            </div>
+            <div class="ps-side">
+                <div class="ps-side-logo">
+                    <img src="images/mini-logo.webp" alt="mini site logo">
+                    <p>Austin</p>
+                </div>
+                <p class="ps-side-sub">Web | Dev</p>
+                <div class="ps-side-text">
+                    <h3>
+                        Front-end
+                    </h3>
+                </div>
+                <div class="ps-rating">
+                    <div class="rating-top">
+                        <p>DOPE</p>
+                    </div>
+                    <div class="rating-letter">
+                        <h2>D</h2>
+                    </div>
+                    <div class="rating-below">
+                        <p>ABCD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="mobile-project" href="https://bejewelled-unicorn-5837be.netlify.app/" target="_blank" aria-label="Weather Project Button">
+            <img src="images/mobile/weather-channel-mobile.webp" alt="weather project image">
+        </a>
+
+        <a class="mobile-project" href="https://poetic-rabanadas-1d8116.netlify.app/" target="_blank" aria-label="game database project">
+            <img src="images/mobile/game-data-mobile.webp" alt="game database project image">
+        </a>
+
+        <a class="mobile-project" href="https://symphonious-frangipane-463737.netlify.app/" target="_blank" aria-label="Ecomm Soylent Con">
+            <img src="images/ecomm-mobile.jpeg" alt="Ecomm Soylent Clone">
+        </a>
+
+        <a class="mobile-project" href="https://austintorres578.github.io/ROCKHORSE-SITE/" target="_blank" aria-label="Lighthouse Score Project Button">
+            <img src="images/mobile/lighthouse-score-mobile.webp" alt="lighthouse score project image">
+        </a>
+
+    </section>
+
+    <section class="mobile-contact-con">
+
+        <div class="mobile-contact-line">
+            <div class="red">
+
+            </div>
+            <div class="yellow">
+
+            </div>
+            <div class="cyan">
+
+            </div>
+            <div class="blue">
+
+            </div>
+        </div>
+
+        <div class="mobile-contact">
+            <h3>Let's talk.</h3>
+            <p>New projects, freelance inquiry or even a coffee.</p>
+            <form id="contact-form" class="contact-form">
+            
+                <label for="mobile-name-input">Name *</label>
+                <input type="text" name="user_name" id="mobile-name-input"></input>
+                
+                <label for="mobile-email-input">Email *</label>
+                <input type="email" name="user_email" id="mobile-email-input"></input>
+                
+                <label for="mobile-message">Message:</label>
+                <textarea name="message" id="mobile-message"></textarea>
+                <input type="submit" id="form-button" value="Send Message"></input>
+            </form>
+            <div class="floating-contact">
+                <h1>Contact</h1>
+            </div>
+        </div>
+
+        <div class="mobile-contact-line">
+            <div class="red">
+
+            </div>
+            <div class="yellow">
+
+            </div>
+            <div class="cyan">
+
+            </div>
+            <div class="blue">
+
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-logo">
+            <a href="/">
+                <img src="images/nav-logo.webp" alt="footer logo">
+            </a>
+        </div>
+        <div class="footer-nav">
+            <a href="https://www.linkedin.com/in/austin-torres-55696420a" aria-label="LinkedIn Button">Linkedin</a>
+            <a href="https://github.com/austintorres578/" aria-label="Github Button">Github</a>
+        </div>
+        <div class="footer-copyright">
+            <p>© <span id="year"></span> Austin Torres</p>
+            <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
