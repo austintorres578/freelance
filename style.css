@@ -858,7 +858,8 @@ header img{
 .project h1{
     font-family: 'zrnic';
     letter-spacing: 3px;
-    font-size: 60px;
+    font-size: 50px;
+    line-height: 50px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
