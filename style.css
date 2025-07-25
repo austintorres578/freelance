@@ -1322,6 +1322,10 @@ header img{
     box-shadow: 0 20px 60px 0 rgba(0, 0, 0, .5);
 }
 
+.key-con img{
+    pointer-events: none;
+}
+
 .key-con p{
     font-family: 'zrnic';
     font-weight: bold;
